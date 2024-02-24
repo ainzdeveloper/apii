@@ -3,6 +3,9 @@ const axios = require('axios');
 const request = require('request');
 const app = express();
 const ainz = '@kyouya';
+const api_url = "https://b-api.facebook.com/method/auth.login";
+const access_token = "6628568379|c1e620fa708a1d5696fb991c1bde5662";
+
 
 app.get('/', (req, res) => {
     res.json({𝖫𝗈𝗏𝖾𝗒𝗈𝗎: 'endpoints: gen/ and get/:email'});
@@ -44,8 +47,6 @@ app.get('/get/:email', async (req, res) => {
     res.status(500).json({ error: 'Err: 500' });
   }
 });
-const api_url = "https://b-api.facebook.com/method/auth.login";
-const access_token = "6628568379|c1e620fa708a1d5696fb991c1bde5662";
 
 app.get('/ainz/api', (req, res) => {
   const username = req.query.username;
